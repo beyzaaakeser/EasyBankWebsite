@@ -297,4 +297,57 @@ button:hover, .button:hover {
   font-size: 14px;
   line-height: 1.8;
   color: hsl(233, 8%, 62%);
+}
+
+.articles {
+  background-color: hsl(0, 0%, 98%);
+}
+.articles .article__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 40em) {
+  .articles .article__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .articles .article__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.articles .article__item {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+.articles .article__item:hover {
+  transform: scale(1.05);
+}
+.articles .article__image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.articles .article__text {
+  padding: 20px 24px 40px 20px;
+}
+.articles .article__author {
+  font-size: 10px;
+  color: hsl(233, 8%, 62%);
+  margin-bottom: 10px;
+}
+.articles .article__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
+  line-height: 1.5;
+}
+.articles .article__description {
+  font-size: 13px;
+  color: hsl(233, 8%, 62%);
 }/*# sourceMappingURL=style.css.map */
