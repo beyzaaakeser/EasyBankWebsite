@@ -7,18 +7,22 @@
     }
 
     &__logo{
-        /* img{
+        img{
             width: 140px;
-        } */
+            height: 18px;
+        }
     }
 
-    &__links{
-        
+    &__menu{
+        background-color: $white;
+        width: calc(100% - 50px);
+        margin-left: 20%;
         a{
             position: relative;
             font-size: $font-sm;
             color: $grayishBlue;
-            
+            letter-spacing: 1.2px;
+            margin-right: 30px;
             &::before{
                 content: "";
                 display: block;
@@ -38,6 +42,31 @@
                     border-radius: 15px;
                     transition: all 0.5s ease;
                 }
+            }
+        }
+    }
+
+    .menuBtn{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .header{
+        &__menu{
+            display: none;
+        }
+
+        a.button{
+            display: none;
+        }
+
+        .menuBtn{
+            display: inline-block;
+            margin-right: 15px;
+            i{
+                font-size: large;
+                
             }
         }
     }
